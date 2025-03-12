@@ -1,5 +1,53 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
+  :root {
+    --pink: #eb4884;
+    --red: #fa634d;
+    --orange: #faa20e;
+    --yellow: #f7ed00;
+    --green: #7bd314;
+
+  }
+  
+  label {
+    font-family: Roboto;
+  }
+
+  button {
+    font-family: Roboto;
+  }
+
+  .skip-link {
+    position: absolute !important; /* Found to use this in UMSI website */
+    overflow: hidden;
+    width: 1%;
+    height: 1%;
+    display: block;
+    text-align: center;
+    top: -100vh;
+    left: 0;
+}
+
+.skip-link:focus,
+.skip-link:focus-within,
+.skip-link:active {
+    position: relative !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background: #f2f2f2;
+    border-bottom: 1% solid #ccc;
+    outline: 3px solid var(--red);
+    outline-offset: 2px;
+    display: block;
+    grid-row: 1;
+}
+
+.skip-link:hover {
+    background-color: #e0e0e0;
+}
   
   form {
     display: grid;
@@ -12,18 +60,20 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #702082;
     background: #CFC096;
+    align-items: center;
   }
 
   .radio {
     grid-column-start: 1;
     grid-column-end: 3;
-    /* background: #575294; */
-    color: #702082;
+    color: var(--pink);
+    background-color: var(--green);
   }
 
   #name {
     width: 100%;
     padding: 10px;
+    font-family: Roboto;
     font-size: 18px;
     font-weight: bold;
     background: #CFC096;

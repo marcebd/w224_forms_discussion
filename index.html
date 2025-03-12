@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Add fonts from Adobe fonts or Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Submit Recommendations</title>
-    <!-- Add a favicon -->
-</head>
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
+  </head>
 <body>
   <!-- Implement a skip to main! -->
-    <!-- <form action="" method="post"> Connect to formspree.io-->
+  <header>
+    <a class="skip-link" href="#main-content" tabindex="0">Skip to Main Content</a>
+  </header>
+  <main>
+      <!-- <form action="" method="post"> Connect to formspree.io-->
+        <form action="https://formspree.io/f/mrbpgjwb" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
-<div class="radio">
-        <label>Area of Submission:</label><br>
-        <!-- How can the label and button line up and be easily navigatable? -->
-  <input type="radio" id="travel" name="interest" value="travel" required>
-  <label for="travel">Travel</label><br>
-  <input type="radio" id="recipe" name="interest" value="recipe" tabindex="0">
-  <label for="recipe">Recipe</label><br>
-  <input type="radio" id="pets" name="interest" value="pets">
-  <label for="pets">Pets</label><br><br>
-</div>
-
-
+        <div class="radio">
+            <label>Area of Submission:</label><br>
+          <!-- How can the label and button line up and be easily navigatable? -->
+          <div class="radio-buttons">
+            <input type="radio" id="travel" name="interest" value="travel" required>
+            <label for="travel">Travel</label><br>
+            <input type="radio" id="recipe" name="interest" value="recipe" tabindex="0">
+            <label for="recipe">Recipe</label><br>
+            <input type="radio" id="pets" name="interest" value="pets" tabindex="0">
+            <label for="pets">Pets</label><br><br>
+          </div>
+        </div>
         <label for="message">Message:</label>
         <textarea id="message" name="message"></textarea><br><br>
 
@@ -36,5 +41,6 @@
 
         <button type="reset">Reset</button>
       </form>
+  </main>   
 </body>
 </html>
